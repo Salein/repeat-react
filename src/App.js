@@ -28,13 +28,26 @@ import "./App.css"
 
 // export default App
 
+// const App = () => {
+//     const isAuth = false
+//   return (
+//     <>
+//     {!isAuth && <p>Вы авторизованы</p>}
+//     </>
+//   )
+// }
+
+// export default App
+
 const App = () => {
-    const isAuth = false
+  const showMess = () => {
+    alert('Yo')
+  }
   return (
-    <>
-    {!isAuth && <p>Вы авторизованы</p>}
-    </>
-  )
+  <>
+  <button onClick={showMess} >Click</button>
+  </>
+)
 }
 
 export default App
