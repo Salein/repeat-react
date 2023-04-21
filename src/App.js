@@ -12,16 +12,27 @@ import "./App.css"
 // }
 
 // export default App
+// const App = () => {
+//   const items = <ul>
+//     <li>1</li>
+//     <li>2</li>
+//     <li>3</li>
+//     </ul>
+
+//   return (
+//     <>
+//     {items}
+//     </>
+//   )
+// }
+
+// export default App
+
 const App = () => {
-  const items = <ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    </ul>
-    
+    const isAuth = false
   return (
     <>
-    {items}
+    {!isAuth && <p>Вы авторизованы</p>}
     </>
   )
 }
