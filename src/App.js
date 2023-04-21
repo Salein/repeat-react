@@ -1,14 +1,29 @@
-import React from "react";
-import "./App.css";
+import React from "react"
+import "./App.css"
 
-function App() {
-  const arr = [1, 2, 3, 4, 5];
+// function App() {
+//   const arr = [1, 2, 3, 4, 5]
 	
-	return <div>
-		<ul>
-      {arr.map(i => <li>{i}</li>)}
+// 	return <div>
+// 		<ul>
+//       {arr.map(i => <li>{i}</li>)}
+//     </ul>
+// 	</div>
+// }
+
+// export default App
+const App = () => {
+  const items = <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
     </ul>
-	</div>;
+    
+  return (
+    <>
+    {items}
+    </>
+  )
 }
 
-export default App;
+export default App
