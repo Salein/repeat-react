@@ -87,27 +87,52 @@ import "./App.css"
 
 // export default App;
 
+// const App = () => {
+//   const [name, setName] = useState("")
+//   const [result, setResult] = useState()
+
+//   const handlerChangeName = (e) => {
+//     return setName(e.target.value)
+//   }
+
+//   const handlerClick = () => {
+//     setResult(name)
+//   }
+
+//   return (
+//     <>
+//       <div>{result}</div>
+//       <br />
+//       <input value={name} onChange={handlerChangeName} />
+//       <br />
+//       <button onClick={handlerClick}>Change name</button>
+//     </>
+//   )
+// }
+
+// export default App
+
 const App = () => {
-  const [name, setName] = useState("")
-  const [result, setResult] = useState()
 
-  const handlerChangeName = (e) => {
-    return setName(e.target.value)
+  const [checked, setChecked] = useState(false)
+  const [hello, setHello] = useState()
+  const [bye, setBye] = useState()
+
+  const handleClick = () => {
+    if (checked) {
+     setHello('Hello User')
+    } else {
+      setBye('Bye User')
+    }
   }
 
-  const handlerClick = () => {
-    setResult(name)
-  }
-
-  return (
-    <>
-      <div>{result}</div>
-      <br />
-      <input value={name} onChange={handlerChangeName} />
-      <br />
-      <button onClick={handlerClick}>Change name</button>
-    </>
-  )
+  return <>
+  <div>{checked ? hello : bye}</div>
+  <br />
+  <input type="checkbox" checked={checked} onChange={() => {setChecked(!checked)}}/>
+  <br />
+  <input type='submit' onClick={handleClick}/>
+  </>
 }
 
 export default App
