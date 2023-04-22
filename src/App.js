@@ -112,26 +112,50 @@ import "./App.css"
 
 // export default App
 
+// const App = () => {
+
+//   const [checked, setChecked] = useState(false)
+//   const [hello, setHello] = useState()
+//   const [bye, setBye] = useState()
+
+//   const handleClick = () => {
+//     if (checked) {
+//      setHello('Hello User')
+//     } else {
+//       setBye('Bye User')
+//     }
+//   }
+
+//   return <>
+//   <div>{checked ? hello : bye}</div>
+//   <br />
+//   <input type="checkbox" checked={checked} onChange={() => {setChecked(!checked)}}/>
+//   <br />
+//   <input type='submit' onClick={handleClick}/>
+//   </>
+// }
+
+// export default App
+
+
 const App = () => {
 
-  const [checked, setChecked] = useState(false)
-  const [hello, setHello] = useState()
-  const [bye, setBye] = useState()
+  const [value, setValue] = useState('')
 
-  const handleClick = () => {
-    if (checked) {
-     setHello('Hello User')
-    } else {
-      setBye('Bye User')
-    }
+  const handleChange = (e) => {
+    setValue(e.target.value)
   }
 
   return <>
-  <div>{checked ? hello : bye}</div>
+  <div>You like: {value}</div>
   <br />
-  <input type="checkbox" checked={checked} onChange={() => {setChecked(!checked)}}/>
-  <br />
-  <input type='submit' onClick={handleClick}/>
+  <select value={value} onChange={handleChange}>
+    <option>Js</option>
+    <option>Node</option>
+    <option>Php</option>
+    <option>Nest</option>
+    <option>Vue</option>
+  </select>
   </>
 }
 
